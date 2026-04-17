@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Bridgerton International Pvt Ltd</title>
+  <meta name="description" content="Contact Bridgerton International Pvt Ltd for freight quotes, shipping inquiries. Office: 268 A, Plot D, Phase 8B, Sector 74, SAS Nagar, Punjab." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.3fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-form-wrapper {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-amber);
+      border-radius: var(--radius-md);
+      padding: 44px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-form-wrapper::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: var(--gradient-cta);
+    }
+    .contact-form-wrapper h2 {
+      font-size: 1.6rem;
+      margin-bottom: 6px;
+    }
+    .contact-form-wrapper > p {
+      font-size: 0.9rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+    .form-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23B0B8CC' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 16px;
+      background: var(--gradient-cta);
+      color: #000;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      border: none;
+      font-family: var(--font-heading);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .submit-btn:hover {
+      box-shadow: 0 8px 30px rgba(245,166,35,0.4);
+      transform: translateY(-2px);
+    }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 32px;
+    }
+    .form-success .check-icon {
+      font-size: 3rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .contact-sidebar { display: flex; flex-direction: column; gap: 20px; }
+    .contact-card-lg {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-amber);
+      border-radius: var(--radius-md);
+      padding: 28px;
+      transition: var(--transition);
+    }
+    .contact-card-lg:hover { border-color: var(--accent-gold); box-shadow: var(--shadow-glow); }
+    .contact-card-lg h3 {
+      font-size: 1rem;
+      color: var(--text-white);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .contact-card-lg h3 i { color: var(--accent-gold); }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .contact-detail i { color: var(--accent-gold); width: 18px; text-align: center; font-size: 0.9rem; }
+    .contact-detail a, .contact-detail span { font-size: 0.9rem; color: var(--text-body); transition: var(--transition); }
+    .contact-detail a:hover { color: var(--accent-gold); }
+    .whatsapp-card {
+      background: linear-gradient(135deg, rgba(37,211,102,0.12), rgba(37,211,102,0.05));
+      border: 1px solid rgba(37,211,102,0.25);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .whatsapp-card:hover { box-shadow: 0 0 20px rgba(37,211,102,0.2); }
+    .whatsapp-card h3 { font-size: 1rem; color: var(--text-white); margin-bottom: 8px; }
+    .whatsapp-card p { font-size: 0.85rem; color: var(--text-body); margin-bottom: 16px; }
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      background: #25d366;
+      color: white;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      transition: var(--transition);
+    }
+    .whatsapp-btn:hover { background: #20ba58; box-shadow: 0 4px 20px rgba(37,211,102,0.4); transform: translateY(-2px); }
+    .hours-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .hours-item {
+      padding: 10px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,0.06);
+    }
+    .hours-item .day { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 2px; }
+    .hours-item .time { font-size: 0.85rem; color: var(--text-white); font-weight: 500; }
+    @media (max-width: 900px) {
+      .contact-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .contact-form-wrapper { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">BI</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Bridgerton International</span>
+          <span class="nav-logo-tag">The Future of Global Shipping</span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
+      </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon toggle-icon-sun">🌙</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span class="toggle-label">Dark Mode</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb" data-aos="fade-down">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i>
+      <span>Contact</span>
+    </div>
+    <span class="section-label" data-aos="fade-up"><i class="fas fa-paper-plane"></i> &nbsp; Get In Touch</span>
+    <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">
+      Let's Discuss Your<br>Freight Requirements
+    </h1>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Get a customized freight quote, ask about our services, or reach out for partnership discussions. Our team responds within 24 hours.
+    </p>
+  </div>
+</section>
+
+<!-- CONTACT INFO STRIP -->
+<section class="section-sm" style="background:var(--bg-card);border-top:1px solid var(--border-amber);border-bottom:1px solid var(--border-amber);">
+  <div class="container">
+    <div class="contact-info-grid">
+      <div class="contact-info-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="icon"><i class="fas fa-envelope"></i></div>
+        <h4>Email Us</h4>
+        <a href="mailto:Info@bridgertoninternational.com" style="word-break:break-all;">Info@bridgertoninternational.com</a>
+      </div>
+      <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+        <h4>Office Location</h4>
+        <p>268 A, Plot D, Phase 8B<br>Industrial Area, Sector 74<br>Sahibzada Ajit Singh Nagar, Punjab 140307</p>
+      </div>
+      <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="icon"><i class="fas fa-star" style="color:#F5A623;"></i></div>
+        <h4>Google Rating</h4>
+        <p><i class="fas fa-star" style="color:#F5A623;"></i><i class="fas fa-star" style="color:#F5A623;"></i><i class="fas fa-star" style="color:#F5A623;"></i><i class="fas fa-star" style="color:#F5A623;"></i><i class="fas fa-star" style="color:#F5A623;"></i> 5.0 / 5.0<br>Google Verified Business</p>
+      </div>
+      <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/12095835894" target="_blank">Message Us Instantly</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT FORM + SIDEBAR -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Quote Form -->
+      <div class="contact-form-wrapper" data-aos="fade-right">
+        <h2>Request a Freight Quote</h2>
+        <p>Fill out the form below and our freight experts will respond with a customized quote within 24 hours.</p>
+
+        <form id="quoteForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" placeholder="e.g. Rajveer" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" placeholder="e.g. Singh" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="you@company.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone / WhatsApp</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 or +1..." />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="company">Company Name</label>
+            <input type="text" id="company" name="company" placeholder="Your company or organization" />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="service">Service Required *</label>
+              <select id="service" name="service" class="form-select" required>
+                <option value="" disabled selected>Select a service...</option>
+                <option value="freight-forwarding">Global Freight Forwarding</option>
+                <option value="drayage">Drayage Services</option>
+                <option value="port-to-port">Port-to-Port Transport</option>
+                <option value="outsourcing">Outsourcing / Backend</option>
+                <option value="container">Container & Road Freight</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="origin">Origin Location</label>
+              <input type="text" id="origin" name="origin" placeholder="City, Country" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="destination">Destination</label>
+              <input type="text" id="destination" name="destination" placeholder="City, Country" />
+            </div>
+            <div class="form-group">
+              <label for="cargo">Cargo Type / Weight</label>
+              <input type="text" id="cargo" name="cargo" placeholder="e.g. 2 pallets, 500kg" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Details</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your shipment, timeline, special requirements, or any questions..."></textarea>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px;">
+            <input type="checkbox" id="consent" name="consent" style="width:auto;accent-color:var(--accent-gold);" required />
+            <label for="consent" style="font-size:0.82rem;color:var(--text-muted);cursor:pointer;">I agree to be contacted by Bridgerton International regarding this inquiry.</label>
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            <i class="fas fa-paper-plane"></i> Send Quote Request
+          </button>
+        </form>
+
+        <div class="form-success" id="formSuccess">
+          <span class="check-icon"><i class="fas fa-circle-check" style="color:#25d366;"></i></span>
+          <h3 style="color:var(--text-white);margin-bottom:10px;">Quote Request Sent!</h3>
+          <p>Thank you for reaching out. Our freight team will contact you within 24 hours with a customized quote.</p>
+          <a href="index.html" class="btn btn-primary" style="margin-top:20px;">Back to Home</a>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="contact-sidebar" data-aos="fade-left">
+
+        <!-- Primary Contact -->
+        <div class="contact-card-lg">
+          <h3><i class="fas fa-phone-alt"></i> Direct Contact</h3>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:Info@bridgertoninternational.com">Info@bridgertoninternational.com</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-user-tie"></i>
+            <a href="mailto:Hr@bridgertoninternational.com">Hr@bridgertoninternational.com</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <a href="tel:+12095835894">+1 (209) 583-5894</a>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-map-pin"></i>
+            <span>268 A, Plot D, Phase 8B, Industrial Area, Sector 74, Sahibzada Ajit Singh Nagar, Punjab 140307</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-star" style="color:#F5A623;"></i>
+            <span>5.0 <i class="fas fa-star" style="color:#F5A623;font-size:0.8rem;"></i> Rated on Google Business</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-industry"></i>
+            <span>Industry: Shipping & Equipment Logistics</span>
+          </div>
+        </div>
+
+        <!-- WhatsApp Quick Contact -->
+        <div class="whatsapp-card">
+          <h3><i class="fab fa-whatsapp"></i> WhatsApp Quick Contact</h3>
+          <p>Chat instantly with our team on WhatsApp. Share shipment details, ask for a quote, or get real-time freight updates.</p>
+          <a href="https://wa.me/12095835894?text=Hello%2C%20I%20would%20like%20to%20inquire%20about%20freight%20services%20from%20Bridgerton%20International." target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Start WhatsApp Chat
+          </a>
+        </div>
+
+        <!-- Office Hours -->
+        <div class="contact-card-lg">
+          <h3><i class="fas fa-clock"></i> Office Hours</h3>
+          <div class="hours-grid">
+            <div class="hours-item">
+              <div class="day">Monday - Friday</div>
+              <div class="time">5:30 PM - 2:30 AM</div>
+            </div>
+            <div class="hours-item">
+              <div class="day">Saturday - Sunday</div>
+              <div class="time">Emergency Only</div>
+            </div>
+            <div class="hours-item">
+              <div class="day">WhatsApp / Urgent</div>
+              <div class="time">Mon–Fri 5:30 PM - 2:30 AM</div>
+            </div>
+          </div>
+          <div style="margin-top:16px;padding:12px;background:rgba(37,211,102,0.08);border-radius:6px;border:1px solid rgba(37,211,102,0.2);">
+            <p style="font-size:0.82rem;color:#25d366;"><i class="fas fa-info-circle"></i> &nbsp; Saturday and Sunday support is available for emergencies only.</p>
+          </div>
+        </div>
+
+        <!-- Response Promise -->
+        <div class="contact-card-lg" style="background:linear-gradient(135deg,rgba(245,166,35,0.08),rgba(232,99,10,0.05));">
+          <h3><i class="fas fa-bolt"></i> Our Response Promise</h3>
+          <div class="contact-detail">
+            <i class="fas fa-check-circle"></i>
+            <span>Quote requests — within 24 hours</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-check-circle"></i>
+            <span>General inquiries — within 12 hours</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-check-circle"></i>
+            <span>WhatsApp messages — within 2 hours</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-check-circle"></i>
+            <span>Urgent freight — same-day response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST & LEADERSHIP (Added per request) -->
+<section class="section" style="background:var(--bg-primary); border-top:1px solid var(--border-amber);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:48px;">
+      <span class="section-label" data-aos="fade-up"><i class="fas fa-shield-alt"></i> &nbsp; Trusted by Global Experts</span>
+      <h2 class="section-title" data-aos="fade-up" data-aos-delay="100">Partners You Can Rely On</h2>
+    </div>
+
+    <!-- CEO SPLIT -->
+    <div style="background:var(--bg-card); border:1px solid var(--border-amber); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1fr 1.2fr; align-items:center; margin-bottom: 64px;" data-aos="zoom-in">
+      <div style="height:400px; width:100%;">
+        <img src="images/ceo.png" alt="Arun Thakur — Founder & CEO" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div style="padding:40px;">
+        <span class="section-label" style="font-size:0.7rem;"><i class="fas fa-user-tie"></i> &nbsp; Founder & CEO</span>
+        <h3 style="font-size:1.8rem; margin-bottom:12px; color:var(--text-heading);">Arun Thakur</h3>
+        <p style="color:var(--text-body); font-size:0.92rem; line-height:1.7; margin-bottom:20px;">
+          "Every inquiry at Bridgerton is handled with the personal touch and professional rigor required for global logistics. We are here to simplify your supply chain."
+        </p>
+        <a href="https://wa.me/12095835894" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> Chat with CEO</a>
+      </div>
+    </div>
+
+    <!-- TEAM PREVIEW -->
+    <div style="background:var(--bg-card); border:1px solid var(--border-amber); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1.2fr 1fr; align-items:center;" data-aos="zoom-in" data-aos-delay="100">
+      <div style="padding:40px;">
+        <span class="section-label" style="font-size:0.7rem;"><i class="fas fa-users"></i> &nbsp; Global Workforce</span>
+        <h3 style="font-size:1.8rem; margin-bottom:12px; color:var(--text-heading);">Our 24/7 Support Team</h3>
+        <p style="color:var(--text-body); font-size:0.92rem; line-height:1.7; margin-bottom:20px;">
+          Behind every successful shipment is a dedicated team of 20+ coordinators. From Mohali to international hubs, we're tracking your cargo 24/7/365.
+        </p>
+        <div style="display:flex; gap:20px;">
+          <div class="stat-item" style="padding:0; background:transparent; border:none; text-align:left;">
+            <div class="num" style="font-size:1.4rem; color:var(--accent-gold);">5.0 <i class="fas fa-star" style="font-size:1rem;"></i></div>
+            <div class="day" style="font-size:0.7rem; text-transform:uppercase;">User Rating</div>
+          </div>
+          <div class="stat-item" style="padding:0; background:transparent; border:none; text-align:left;">
+            <div class="num" style="font-size:1.4rem; color:var(--accent-gold);">2h</div>
+            <div class="day" style="font-size:0.7rem; text-transform:uppercase;">Avg Response</div>
+          </div>
+        </div>
+      </div>
+      <div style="height:auto; min-height:350px; width:100%; background:rgba(0,0,0,0.2); display:flex; align-items:center; justify-content:center; padding:10px; border-left:1px solid var(--border-amber);">
+        <img src="images/TEAM.jpeg" alt="Bridgerton Team" style="max-width:100%; height:auto; max-height:400px; object-fit:contain; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GOOGLE MAPS -->
+<section class="section-sm" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center" style="margin-bottom:32px;" data-aos="fade-up">
+      <span class="section-label"><i class="fas fa-map-marked-alt"></i> &nbsp; Office Location</span>
+      <h2 class="section-title">Find Us in Mohali, Punjab</h2>
+    </div>
+    <div class="map-container" data-aos="zoom-in">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3430.410092278228!2d76.6854539!3d30.706869649999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fefe6b03fc455%3A0x6b32cc9bced8db1e!2sBridgerton%20International%20Pvt%20Ltd!5e0!3m2!1sen!2sin!4v1776446885532!5m2!1sen!2sin"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Office Location — Bridgerton International Pvt Ltd"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="nav-logo-icon">BI</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
+            <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+          </div>
+        </a>
+        <p>Global freight coordination from Mohali, Punjab — 5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google rated, serving 50+ countries worldwide.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/111278294/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/12095835894" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Company</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="coverage.html">World Coverage</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Logistics Services</h4>
+        <ul>
+          <li><a href="services.html#freight-forwarding">Freight Forwarding</a></li>
+          <li><a href="drayage.html">Drayage Services</a></li>
+          <li><a href="port-to-port.html">Port-to-Port</a></li>
+          <li><a href="outsourcing.html">Outsourcing & Team</a></li>
+          <li><a href="services.html#container-freight">Road Freight</a></li>
+          <li><a href="services.html#customs-brokerage">Customs Brokerage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:Info@bridgertoninternational.com">Info@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-user-tie"></i><a href="mailto:Hr@bridgertoninternational.com">Hr@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>268 A, Plot D, Phase 8B, Industrial Area, Sector 74, SAS Nagar, Punjab 140307</span></div>
+        <div class="footer-contact-item"><i class="fas fa-star" style="color:#F5A623;"></i><span>5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google Verified</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Bridgerton International Pvt Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/12095835894" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  // Form Submission
+  const form = document.getElementById('quoteForm');
+  const success = document.getElementById('formSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        form.style.display = 'none';
+        success.style.display = 'block';
+      }, 1500);
+    });
+  }
+</script>
+<script src="main.js"></script>
+</body>
+</html>

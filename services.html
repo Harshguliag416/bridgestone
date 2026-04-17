@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services | Bridgerton International Pvt Ltd</title>
+  <meta name="description" content="Explore all freight and logistics services offered by Bridgerton International — FTL, LTL, Drayage, Port-to-Port, Global Freight Forwarding, and Outsourcing." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .service-full-card {
+      background: var(--gradient-card);
+      border: 1.5px solid var(--border-amber);
+      border-radius: var(--radius-lg);
+      padding: 64px 48px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      transition: var(--transition);
+      margin-bottom: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-card);
+    }
+    .service-full-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(245,166,35,0.5), transparent);
+    }
+    .service-full-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 40px 80px rgba(37,99,235,0.12), var(--shadow-glow);
+      transform: translateY(-8px);
+    }
+    .service-full-card.reverse { direction: rtl; }
+    .service-full-card.reverse > * { direction: ltr; }
+    .service-full-img {
+      border-radius: 10px;
+      overflow: hidden;
+      height: 280px;
+      border: 1px solid var(--border-amber);
+    }
+    .service-full-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .service-full-card:hover .service-full-img img { transform: scale(1.04); }
+    .service-full-body h3 { font-size: 1.5rem; margin-bottom: 14px; }
+    .service-full-body p { margin-bottom: 20px; font-size: 0.95rem; }
+    .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
+    .feature-list li {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 0.88rem;
+      color: var(--text-body);
+    }
+    .feature-list li i { color: var(--accent-gold); font-size: 0.75rem; }
+    .service-number {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      font-weight: 800;
+      color: rgba(245,166,35,0.06);
+      line-height: 1;
+    }
+    @media (max-width: 768px) {
+      .service-full-card { grid-template-columns: 1fr; padding: 32px 24px; }
+      .service-full-card.reverse { direction: ltr; }
+      .feature-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">BI</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
+          <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
+      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon toggle-icon-sun">🌙</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span class="toggle-label">Dark Mode</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb" data-aos="fade-down">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i>
+      <span>Services</span>
+    </div>
+    <span class="section-label" data-aos="fade-up"><i class="fas fa-boxes-stacking"></i> &nbsp; What We Offer</span>
+    <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">
+      Comprehensive Freight &<br>Logistics Services
+    </h1>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      From global freight forwarding to last-mile drayage — Bridgerton International delivers end-to-end shipping solutions planned in India and executed worldwide.
+    </p>
+  </div>
+</section>
+
+<!-- SERVICES FULL -->
+<section class="section" style="background:var(--bg-primary);" id="services-list">
+  <div class="container">
+
+    <!-- 1. Global Freight Forwarding -->
+    <div class="service-full-card" id="freight-forwarding" data-aos="fade-up">
+      <div class="service-number">01</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-01.jpg" alt="Global Freight Forwarding — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🌐</div>
+        <h3>Global Freight Forwarding</h3>
+        <p>Our international freight forwarding service covers air, sea, and multimodal transportation across 50+ countries. We handle end-to-end coordination — from origin pickup to final delivery — with complete documentation, customs clearance, and real-time tracking.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Air & ocean freight management</li>
+          <li><i class="fas fa-check"></i> Customs clearance support</li>
+          <li><i class="fas fa-check"></i> Multi-modal route planning</li>
+          <li><i class="fas fa-check"></i> Full documentation handling</li>
+          <li><i class="fas fa-check"></i> Consolidation services</li>
+          <li><i class="fas fa-check"></i> Real-time cargo tracking</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Request Freight Forwarding Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+
+    <!-- 4. Drayage -->
+    <div class="service-full-card reverse" id="drayage" data-aos="fade-up">
+      <div class="service-number">02</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-02.jpg" alt="Drayage Services — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🏗️</div>
+        <h3>Drayage Services</h3>
+        <p>Drayage is the critical short-haul movement of containers from seaports, rail yards, and intermodal terminals to distribution centers and warehouses. Our drayage network ensures containers don't sit idle — reducing detention costs and improving supply chain velocity.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Port & rail yard pickup</li>
+          <li><i class="fas fa-check"></i> First & last mile moves</li>
+          <li><i class="fas fa-check"></i> Container tracking</li>
+          <li><i class="fas fa-check"></i> Hazmat-compliant options</li>
+          <li><i class="fas fa-check"></i> Detention management</li>
+          <li><i class="fas fa-check"></i> Same-day availability</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="drayage.html" class="btn btn-outline">Drayage Detail Page <i class="fas fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-primary">Get Drayage Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Port-to-Port -->
+    <div class="service-full-card" id="port-to-port" data-aos="fade-up">
+      <div class="service-number">03</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-03.jpg" alt="Port-to-Port Transport — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🚢</div>
+        <h3>Port-to-Port Transport</h3>
+        <p>Our port-to-port service manages the complete journey of shipments from departure port through transit to the receiving port — coordinating ocean carriers, terminal handling, and inland connectivity at both ends for seamless delivery.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Ocean freight booking</li>
+          <li><i class="fas fa-check"></i> Port-of-origin support</li>
+          <li><i class="fas fa-check"></i> Transit coordination</li>
+          <li><i class="fas fa-check"></i> Arrival port handling</li>
+          <li><i class="fas fa-check"></i> Inland routing connection</li>
+          <li><i class="fas fa-check"></i> Full shipment visibility</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="port-to-port.html" class="btn btn-outline">Port-to-Port Details <i class="fas fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-primary">Get Quote</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Outsourcing -->
+    <div class="service-full-card reverse" id="outsourcing" data-aos="fade-up">
+      <div class="service-number">04</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-04.jpg" alt="Outsourcing & Backend Office — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">💼</div>
+        <h3>Outsourcing & Backend Office Services</h3>
+        <p>Bridgerton International provides dedicated remote freight operations for US-based carriers, brokers, and 3PLs. Our India-based team handles dispatch, load management, documentation, tracking, and client communication — enabling cost-efficient US operations.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Remote dispatch teams</li>
+          <li><i class="fas fa-check"></i> Load board management</li>
+          <li><i class="fas fa-check"></i> Carrier packet processing</li>
+          <li><i class="fas fa-check"></i> Shipment documentation</li>
+          <li><i class="fas fa-check"></i> Client reporting & analytics</li>
+          <li><i class="fas fa-check"></i> 24/7 availability</li>
+        </ul>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="outsourcing.html" class="btn btn-outline">Outsourcing Details <i class="fas fa-arrow-right"></i></a>
+          <a href="contact.html" class="btn btn-primary">Discuss Partnership</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 06. USA & Canada Truck Dispatching -->
+    <div class="service-full-card" id="truck-dispatching" data-aos="fade-up">
+      <div class="service-number">06</div>
+      <div class="service-full-img">
+        <img src="images/truck-dispatch.svg" alt="American truck on highway for USA & Canada Dispatch Services" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🛻</div>
+        <h3>USA & Canada Truck Dispatching Services</h3>
+        <p>Bridgerton International supports US and Canadian carriers with dedicated dispatch operations, tailored to cross-border trucking and regional freight movements. We manage load planning, carrier matching, route optimization, driver communication, and compliance so your shipments stay on schedule.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> USA & Canada trucking dispatch</li>
+          <li><i class="fas fa-check"></i> Cross-border compliance support</li>
+          <li><i class="fas fa-check"></i> Carrier selection & load board management</li>
+          <li><i class="fas fa-check"></i> Real-time driver tracking & ETA updates</li>
+          <li><i class="fas fa-check"></i> Dedicated dispatcher communication</li>
+          <li><i class="fas fa-check"></i> BOL and paperwork coordination</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Arrange Truck Dispatch <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- 07. Container & Road Freight -->
+    <div class="service-full-card" id="container-freight" data-aos="fade-up">
+      <div class="service-number">07</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-06.jpg" alt="Container & Road Freight — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🚂</div>
+        <h3>Container & Road Freight</h3>
+        <p>From FCL container movements to domestic road freight, we cover the full spectrum of surface transportation — connecting industrial hubs, seaports, and distribution centers with reliable, tracked movements and competitive rates.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> FCL & LCL container options</li>
+          <li><i class="fas fa-check"></i> Inland road freight</li>
+          <li><i class="fas fa-check"></i> Bonded warehousing links</li>
+          <li><i class="fas fa-check"></i> Cross-docking capability</li>
+          <li><i class="fas fa-check"></i> Temperature-controlled options</li>
+          <li><i class="fas fa-check"></i> GPS fleet tracking</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Request Container Quote <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+    <!-- 08. Customs Brokerage -->
+    <div class="service-full-card reverse" id="customs-brokerage" data-aos="fade-up">
+      <div class="service-number">08</div>
+      <div class="service-full-img">
+        <img src="images/placeholder-07.jpg" alt="Customs Brokerage — Bridgerton International" />
+      </div>
+      <div class="service-full-body">
+        <div class="service-icon">🛡️</div>
+        <h3>Customs Brokerage & Compliance</h3>
+        <p>Navigating international trade regulations can be complex. Our customs brokerage team ensures your cargo remains compliant with regional laws, minimizing delays at borders and ensuring all duties and taxes are correctly calculated and paid.</p>
+        <ul class="feature-list">
+          <li><i class="fas fa-check"></i> Import & export documentation</li>
+          <li><i class="fas fa-check"></i> Tariff classification (HS Codes)</li>
+          <li><i class="fas fa-check"></i> Duty & tax estimation</li>
+          <li><i class="fas fa-check"></i> Compliance auditing</li>
+          <li><i class="fas fa-check"></i> Specialized permit handling</li>
+          <li><i class="fas fa-check"></i> Border clearance coordination</li>
+        </ul>
+        <a href="contact.html" class="btn btn-primary">Get Compliance Advice <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="section-label" data-aos="fade-down"><i class="fas fa-rocket"></i> &nbsp; Start Shipping</span>
+    <h2 class="section-title" data-aos="fade-up">Your Global Freight Partner Awaits</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">Not sure which service fits your shipment? Let our experts analyze your requirements and recommend the optimal freight solution.</p>
+    <div class="btn-group" data-aos="fade-up" data-aos-delay="200">
+      <a href="contact.html" class="btn btn-primary pulse"><i class="fas fa-paper-plane"></i> Get a Custom Quote</a>
+      <a href="about.html" class="btn btn-outline"><i class="fas fa-info-circle"></i> Learn About Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="margin-bottom:4px;display:inline-flex;">
+          <div class="nav-logo-icon">BI</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
+            <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+          </div>
+        </a>
+        <p>India-based global freight coordination company operating across 50+ countries with US citizen collaboration.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/111278294/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/12095835894" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Company</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="coverage.html">World Coverage</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Logistics Services</h4>
+        <ul>
+          <li><a href="services.html#freight-forwarding">Freight Forwarding</a></li>
+          <li><a href="drayage.html">Drayage Services</a></li>
+          <li><a href="port-to-port.html">Port-to-Port</a></li>
+          <li><a href="outsourcing.html">Outsourcing & Team</a></li>
+          <li><a href="services.html#truck-dispatching">USA & Canada Truck Dispatch</a></li>
+          <li><a href="services.html#container-freight">Road Freight</a></li>
+          <li><a href="services.html#customs-brokerage">Customs Brokerage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:Info@bridgertoninternational.com">Info@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-user-tie"></i><a href="mailto:Hr@bridgertoninternational.com">Hr@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>268 A, Plot D, Phase 8B, Industrial Area, Sector 74, SAS Nagar, Punjab 140307</span></div>
+        <div class="footer-contact-item"><i class="fas fa-star" style="color:#F5A623;"></i><span>5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google Verified</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Bridgerton International Pvt Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/12095835894" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

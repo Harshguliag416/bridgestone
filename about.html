@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Bridgerton International Pvt Ltd</title>
+  <meta name="description" content="Learn about Bridgerton International Pvt Ltd — India-based global freight company in Mohali, Punjab. 5.0 Google rating. US citizen collaboration. Discover our story, team, and values." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <style>
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+    }
+    .story-image {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 520px;
+      border: 1px solid var(--border-amber);
+      position: relative;
+      box-shadow: var(--shadow-card);
+    }
+    .story-image img { width: 100%; height: 100%; object-fit: cover; }
+    .story-image-badge {
+      position: absolute;
+      bottom: 24px; left: 24px;
+      background: rgba(13,13,13,0.9);
+      border: 1px solid var(--border-amber);
+      border-radius: 10px;
+      padding: 14px 18px;
+      backdrop-filter: blur(10px);
+    }
+    .story-image-badge .num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      display: block;
+    }
+    .story-image-badge .lbl { font-size: 0.8rem; color: var(--text-body); }
+    .story-body p { margin-bottom: 20px; font-size: 0.95rem; line-height: 1.85; }
+    .story-body .highlight {
+      background: rgba(245,166,35,0.08);
+      border-left: 3px solid var(--accent-gold);
+      padding: 16px 20px;
+      border-radius: 0 8px 8px 0;
+      font-size: 1rem;
+      color: var(--text-white);
+      font-style: italic;
+      margin: 24px 0;
+      line-height: 1.7;
+    }
+    .google-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--gradient-card);
+      border: 1.5px solid var(--border-amber);
+      border-radius: var(--radius-lg);
+      padding: 24px 32px;
+      margin-top: 32px;
+      box-shadow: var(--shadow-card);
+    }
+    .google-badge .stars { font-size: 1.2rem; letter-spacing: -2px; color: #F5A623; }
+    .google-badge .rating-num {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+    }
+    .google-badge .rating-text { font-size: 0.82rem; color: var(--text-body); }
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 12px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--accent-gold), transparent);
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 40px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -34px; top: 6px;
+      width: 14px; height: 14px;
+      background: var(--accent-gold);
+      border-radius: 50%;
+      box-shadow: 0 0 12px rgba(245,166,35,0.5);
+    }
+    .timeline-year {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-gold);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .timeline-item h4 { color: var(--text-white); margin-bottom: 6px; font-size: 1rem; }
+    .timeline-item p { font-size: 0.88rem; color: var(--text-body); line-height: 1.65; }
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .cert-card {
+      background: var(--gradient-card);
+      border: 1.5px solid var(--border-amber);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow-card);
+    }
+    .cert-card:hover { border-color: var(--accent-gold); box-shadow: var(--shadow-glow); transform: translateY(-4px); }
+    .cert-icon { font-size: 2.4rem; margin-bottom: 12px; display: block; }
+    .cert-card h4 { color: var(--text-white); font-size: 0.95rem; margin-bottom: 6px; }
+    .cert-card p { font-size: 0.82rem; color: var(--text-body); }
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; gap: 40px; }
+      .story-image { height: 300px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">BI</div>
+        <div class="nav-logo-text">
+          <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
+          <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+        </div>
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="coverage.html">Coverage</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="nav-cta">Get a Quote</a>
+      </div>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <span class="toggle-icon toggle-icon-sun">🌙</span>
+        <div class="toggle-track"><div class="toggle-thumb"></div></div>
+        <span class="toggle-label">Dark Mode</span>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb" data-aos="fade-down">
+      <a href="index.html">Home</a>
+      <i class="fas fa-chevron-right" style="font-size:0.65rem;"></i>
+      <span>About Us</span>
+    </div>
+    <span class="section-label" data-aos="fade-up"><i class="fas fa-building"></i> &nbsp; Our Story</span>
+    <h1 class="section-title" data-aos="fade-up" data-aos-delay="100">
+      India-Rooted.<br>Globally Connected.
+    </h1>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="200">
+      Bridgerton International Pvt Ltd was built with a singular vision — to deliver world-class freight coordination from the heart of India, with a reach that spans every continent.
+    </p>
+  </div>
+</section>
+
+<!-- COMPANY STORY -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image" data-aos="fade-right">
+        <img src="images/ceo.png" alt="Arun Thakur — CEO of Bridgerton International Pvt Ltd" />
+        <div class="story-image-badge">
+          <span class="num">5.0 <i class="fas fa-star" style="font-size:1.4rem;"></i></span>
+          <span class="lbl">Google Business Rating</span>
+        </div>
+      </div>
+      <div class="story-body" data-aos="fade-left">
+        <span class="section-label"><i class="fas fa-flag"></i> &nbsp; About Bridgerton International</span>
+        <h2 class="section-title" style="text-align:left;">Built to Move<br>the World's Cargo</h2>
+        <p>Bridgerton International Pvt Ltd is a Mohali-based global freight and shipping coordination company operating in the shipping equipment industry. Founded with the mission of delivering Fortune 500-quality logistics management from India, we serve clients across the United States, Europe, the Middle East, and Asia-Pacific.</p>
+        <p>What sets us apart is our unique India-USA collaboration model — our Mohali operations team works in close coordination with US citizen partners to ensure seamless freight execution across American markets, container ports, and inland transportation networks.</p>
+        <div class="highlight">"We believe the best freight coordination isn't just about moving cargo — it's about building trust at every touchpoint, from the first quote to final delivery."</div>
+        <p>Verified with a perfect 5.0 <i class="fas fa-star" style="color:#F5A623;font-size:0.8rem;"></i> Google Business rating, Bridgerton International is recognized for reliability, responsiveness, and an unwavering commitment to client success.</p>
+        <div class="google-badge" data-aos="fade-up">
+          <div>
+            <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            <div class="rating-text">Google Reviews</div>
+          </div>
+          <div>
+            <div class="rating-num">5.0</div>
+            <div class="rating-text">Perfect Score</div>
+          </div>
+          <div style="border-left:1px solid var(--border-amber);padding-left:16px;">
+            <div style="font-family:var(--font-heading);font-size:1.2rem;font-weight:700;color:var(--text-white);">Bridgerton International Pvt Ltd</div>
+            <div class="rating-text">Sahibzada Ajit Singh Nagar, Mohali</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPANY JOURNEY / TIMELINE -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start;" data-aos="fade-up">
+      <div>
+        <span class="section-label"><i class="fas fa-timeline"></i> &nbsp; Our Journey</span>
+        <h2 class="section-title" style="text-align:left;">How We Grew<br>Into a Global Freight Force</h2>
+        <p style="margin-bottom:36px;">From a small coordination firm to a globally-recognized freight partner — here's how Bridgerton International built its reputation for excellence.</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">FOUNDING</div>
+            <h4>Bridgerton International Established</h4>
+            <p>Founded in Sahibzada Ajit Singh Nagar, Mohali, with a focus on freight coordination for US-India trade lanes. The company was built around the vision of premium logistics managed from India.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">YEAR 1</div>
+            <h4>US Collaboration Partnership Launched</h4>
+            <p>Formalized our US citizen collaboration model to handle carrier relations, compliance, and last-mile coordination across the American market — enabling full US freight coverage.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">YEAR 2</div>
+            <h4>Global Expansion — Middle East & Europe</h4>
+            <p>Expanded freight corridors to include the Gulf region, European ports, and Southeast Asia — growing our active shipping lanes to cover 50+ countries across 6 continents.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">PRESENT</div>
+            <h4>5.0 <i class="fas fa-star"></i> Google Rating & Market Leadership</h4>
+            <p>Achieved perfect 5.0 Google Business rating. Operating with 5,000+ completed shipments, a team of 20+ freight professionals, and growing partnerships with premium global carriers.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="gallery-grid" style="margin-bottom:24px;">
+          <div class="gallery-item">
+            <img src="images/placeholder-09.jpg" alt="Bridgerton International — Logistics Operations" />
+            <div class="gallery-overlay"><span>Reception & Client Area</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/placeholder-10.jpg" alt="Bridgerton International — Trucking Coordination" />
+            <div class="gallery-overlay"><span>Operations Team</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/placeholder-11.jpg" alt="Bridgerton International — Strategy Meetings" />
+            <div class="gallery-overlay"><span>Client Meeting Rooms</span></div>
+          </div>
+          <div class="gallery-item">
+            <img src="images/placeholder-12.jpg" alt="Bridgerton International — Global Services" />
+            <div class="gallery-overlay"><span>Dispatch Workstations</span></div>
+          </div>
+        </div>
+        <div style="text-align:center;padding:16px;background:var(--gradient-card);border:1px solid var(--border-amber);border-radius:var(--radius-md);">
+          <p style="font-size:0.85rem;color:var(--text-muted);"><i class="fas fa-map-marker-alt"></i> Sahibzada Ajit Singh Nagar (SAS Nagar), Mohali, Punjab, India</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-label"><i class="fas fa-users"></i> &nbsp; Leadership</span>
+      <h2 class="section-title">The Vision Behind<br>Bridgerton International</h2>
+      <p class="section-subtitle">Founder & CEO Arun Thakur leads our mission to deliver world-class freight solutions with an unwavering commitment to operational excellence.</p>
+    </div>
+    <div style="background:var(--bg-card); border:1px solid var(--border-amber); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1fr 1.2fr; align-items:center; margin-top: 48px;" data-aos="zoom-in">
+      <div style="height:450px; width:100%;">
+        <img src="images/ceo.png" alt="Arun Thakur — Founder & CEO" style="width:100%; height:100%; object-fit:cover;">
+      </div>
+      <div style="padding:48px;">
+        <span class="section-label" style="color:var(--accent-gold); border-color:var(--accent-gold);"><i class="fas fa-crown"></i> &nbsp; Leadership</span>
+        <h3 style="font-size:2.2rem; margin-bottom:12px; color:var(--text-heading);">Arun Thakur</h3>
+        <p style="color:var(--accent-gold); font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px;">Founder & CEO</p>
+        <p style="color:var(--text-body); font-size:1rem; line-height:1.9; margin-bottom:24px;">
+          "Our foundation at Bridgerton International is built on the intersection of deep local expertise and global logistical reach. We empower our partners by removing the complexities of cross-border trade, proving that with the right people and the right technology, no destination is too far."
+        </p>
+        <div style="display:flex; gap:16px;">
+          <a href="https://wa.me/12095835894" target="_blank" class="btn btn-primary" style="padding:10px 24px; font-size:0.85rem;"><i class="fab fa-whatsapp"></i> Chat with CEO</a>
+          <a href="tel:+12095835894" class="btn btn-outline" style="padding:10px 24px; font-size:0.85rem;"><i class="fas fa-phone"></i> Direct Call</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- CORE LEADERSHIP GRID -->
+    <div style="margin-top: 40px; margin-bottom: 40px;">
+      <div class="team-grid">
+        <!-- Rama Thakur -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="team-avatar"><img src="images/rama thakur.png" alt="Rama Thakur"></div>
+          <h3>Rama Thakur</h3>
+          <span class="team-role">Assistant Director</span>
+          <p>Rama directs internal operations and strategic planning, ensuring the company's long-term growth and operational stability.</p>
+          <div class="team-contact">
+            <a href="https://wa.me/12095835894" target="_blank" class="team-whatsapp"><i class="fab fa-whatsapp"></i> Chat</a>
+          </div>
+        </div>
+
+        <!-- Riya Handa -->
+        <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="team-avatar"><img src="images/riya.jpg" alt="Riya Handa"></div>
+          <h3>Riya Handa</h3>
+          <span class="team-role">Human Resources Manager</span>
+          <p>Riya manages our global workforce, focusing on talent acquisition, employee development, and maintaining our 24/7 service culture.</p>
+          <div class="team-contact">
+            <a href="mailto:Hr@bridgertoninternational.com" class="team-phone"><i class="fas fa-envelope"></i> Email HR</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TEAM PREVIEW -->
+    <div style="background:var(--bg-card); border:1px solid var(--border-amber); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1.2fr 1fr; align-items:center; margin-top: 40px;" data-aos="zoom-in" data-aos-delay="100">
+      <div style="padding:48px;">
+        <span class="section-label" style="color:var(--accent-gold); border-color:var(--accent-gold);"><i class="fas fa-users"></i> &nbsp; Global Workforce</span>
+        <h3 style="font-size:2rem; margin-bottom:12px; color:var(--text-heading);">Our 24/7 Support Team</h3>
+        <p style="color:var(--text-body); font-size:1rem; line-height:1.9; margin-bottom:24px;">
+          Behind every successful shipment is a dedicated team of 20+ coordinators. Working round-the-clock across timezones, our team ensures your cargo is monitored from origin to destination without interruption.
+        </p>
+        <div style="display:flex; gap:32px;">
+          <div><h4 style="color:var(--accent-gold); font-size:1.6rem;">20+</h4><p style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Coordinators</p></div>
+          <div><h4 style="color:var(--accent-gold); font-size:1.6rem;">24/7</h4><p style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Monitoring</p></div>
+          <div><h4 style="color:var(--accent-gold); font-size:1.6rem;">5.0 <i class="fas fa-star"></i></h4><p style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted);">Google Rated</p></div>
+        </div>
+      </div>
+      <div style="height:auto; min-height:400px; width:100%; background:rgba(0,0,0,0.2); display:flex; align-items:center; justify-content:center; padding:10px; border-left:1px solid var(--border-amber);">
+        <img src="images/TEAM.jpeg" alt="Bridgerton Global Logistics Team" style="max-width:100%; height:auto; max-height:450px; object-fit:contain; border-radius:8px; box-shadow:0 10px 30px rgba(0,0,0,0.3);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-label"><i class="fas fa-heart"></i> &nbsp; Our Values</span>
+      <h2 class="section-title">The Principles We<br>Build Every Shipment Around</h2>
+      <p class="section-subtitle">These values aren't just words — they're the operating principles that guide every decision, every dispatch, and every client interaction.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="value-icon"><i class="fas fa-bullseye"></i></span>
+        <h4>Precision</h4>
+        <p>Every shipment detail matters. We execute with zero-tolerance for errors in routing, documentation, and communication.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="value-icon"><i class="fas fa-handshake"></i></span>
+        <h4>Partnership</h4>
+        <p>We don't just move cargo — we build lasting relationships. Your success is our success, and we invest in it deeply.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="value-icon"><i class="fas fa-search"></i></span>
+        <h4>Transparency</h4>
+        <p>Full visibility at every stage. No hidden fees, no surprises — just clear, honest communication from quote to delivery.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="value-icon"><i class="fas fa-bolt"></i></span>
+        <h4>Agility</h4>
+        <p>Logistics is fast-moving. We adapt to changes, disruptions, and shifting market conditions without missing a beat.</p>
+      </div>
+      <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+        <span class="value-icon"><i class="fas fa-seedling"></i></span>
+        <h4>Responsibility</h4>
+        <p>We operate with environmental consciousness, ethical business practices, and a commitment to long-term sustainability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRY CREDENTIALS -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="text-center" data-aos="fade-up">
+      <span class="section-label"><i class="fas fa-certificate"></i> &nbsp; Industry Recognition</span>
+      <h2 class="section-title">Verified. Trusted. Rated.</h2>
+    </div>
+    <div class="certifications-grid" data-aos="fade-up">
+      <div class="cert-card">
+        <span class="cert-icon" style="color:#F5A623;"><i class="fas fa-star"></i></span>
+        <h4>Google Business Verified</h4>
+        <p>5.0 perfect rating on Google Business — reflecting consistent client satisfaction.</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon"><i class="fas fa-building"></i></span>
+        <h4>Pvt Ltd Registered</h4>
+        <p>Officially incorporated as Bridgerton International Pvt Ltd in India — Shipping Equipment Industry.</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon"><i class="fas fa-globe"></i></span>
+        <h4>Global Carrier Network</h4>
+        <p>Established partnerships with 100+ vetted global carriers across ocean, air, and road freight.</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon"><i class="fas fa-flag-usa"></i></span>
+        <h4>US Market Compliant</h4>
+        <p>Full adherence to US DOT regulations and FMCSA requirements through our US citizen partnership model.</p>
+      </div>
+      <div class="cert-card">
+        <span class="cert-icon"><i class="fas fa-lock"></i></span>
+        <h4>Cargo Insurance Ready</h4>
+        <p>All shipments coordinated with full cargo insurance options — protecting your freight at every stage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="container">
+    <span class="section-label" data-aos="fade-down"><i class="fas fa-handshake"></i> &nbsp; Work With Us</span>
+    <h2 class="section-title" data-aos="fade-up">Let's Build Something<br>Great Together</h2>
+    <p class="section-subtitle" data-aos="fade-up" data-aos-delay="100">
+      Whether you're a US importer, an Indian exporter, or a global 3PL looking for outsourcing support — Bridgerton International is your freight partner.
+    </p>
+    <div class="btn-group" data-aos="fade-up" data-aos-delay="200">
+      <a href="contact.html" class="btn btn-primary pulse"><i class="fas fa-paper-plane"></i> Contact Our Team</a>
+      <a href="services.html" class="btn btn-outline"><i class="fas fa-boxes-stacking"></i> Explore Services</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="nav-logo" style="display:inline-flex;">
+          <div class="nav-logo-icon">BI</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
+            <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+          </div>
+        </a>
+        <p>Global freight coordination company in Mohali, Punjab — 5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google rated, serving 50+ countries worldwide.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/111278294/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-btn"><i class="fab fa-twitter"></i></a>
+          <a href="https://wa.me/12095835894" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home Page</a></li>
+          <li><a href="about.html">About Company</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="coverage.html">World Coverage</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Logistics Services</h4>
+        <ul>
+          <li><a href="services.html#freight-forwarding">Freight Forwarding</a></li>
+          <li><a href="drayage.html">Drayage Services</a></li>
+          <li><a href="port-to-port.html">Port-to-Port</a></li>
+          <li><a href="outsourcing.html">Outsourcing & Team</a></li>
+          <li><a href="services.html#container-freight">Road Freight</a></li>
+          <li><a href="services.html#customs-brokerage">Customs Brokerage</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact Info</h4>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i><a href="mailto:Info@bridgertoninternational.com">Info@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-user-tie"></i><a href="mailto:Hr@bridgertoninternational.com">Hr@bridgertoninternational.com</a></div>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i><span>268 A, Plot D, Phase 8B, Industrial Area, Sector 74, SAS Nagar, Punjab 140307</span></div>
+        <div class="footer-contact-item"><i class="fas fa-star" style="color:#F5A623;"></i><span>5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google Verified</span></div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Bridgerton International Pvt Ltd. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a><a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/12095835894" target="_blank" class="whatsapp-float"><i class="fab fa-whatsapp"></i></a>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

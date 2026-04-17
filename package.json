@@ -1,0 +1,13 @@
+{
+  "name": "bridgerton-international-website",
+  "version": "1.0.0",
+  "description": "Premium Website for Bridgerton International Pvt Ltd",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx servor .",
+    "build": "echo 'No build step required for static HTML'"
+  },
+  "keywords": [],
+  "author": "Bridgerton International",
+  "license": "ISC"
+}

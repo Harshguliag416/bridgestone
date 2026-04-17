@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="American truck dispatch service">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#002868" />
+      <stop offset="50%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#bf0a30" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <rect x="120" y="420" width="860" height="260" rx="30" fill="#1c1c1c" />
+  <rect x="300" y="260" width="420" height="220" rx="30" fill="#f5f5f5" />
+  <rect x="520" y="440" width="220" height="100" rx="20" fill="#bf0a30" />
+  <circle cx="300" cy="720" r="80" fill="#111" />
+  <circle cx="300" cy="720" r="48" fill="#fff" />
+  <circle cx="820" cy="720" r="80" fill="#111" />
+  <circle cx="820" cy="720" r="48" fill="#fff" />
+  <path d="M160 420 H980 L1040 500 H160 Z" fill="#d4d4d4" opacity="0.35" />
+  <text x="220" y="220" font-family="Arial, sans-serif" font-size="72" fill="#fff">USA & Canada</text>
+  <text x="220" y="310" font-family="Arial, sans-serif" font-size="72" fill="#fff">Truck Dispatch</text>
+</svg>
