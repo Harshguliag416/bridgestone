@@ -22,8 +22,8 @@
     .world-map-wrapper .map-label {
       position: absolute; bottom: 14px; left: 14px;
       background: rgba(0,0,0,0.6); backdrop-filter: blur(8px);
-      border: 1px solid rgba(245,166,35,0.3); border-radius: 6px;
-      padding: 6px 14px; font-size: 0.78rem; color: #F5A623; font-weight: 600;
+      border: 1px solid rgba(185, 28, 28, 0.3); border-radius: 6px;
+      padding: 6px 14px; font-size: 0.78rem; color: #f8fafc; font-weight: 600;
     }
     .pin {
       animation: pin-pulse 2.2s ease-in-out infinite;
@@ -38,7 +38,7 @@
       50% { opacity: 0.7; r: 7; }
     }
     .route-line {
-      stroke: #F5A623; stroke-width: 1.2; fill: none;
+      stroke: var(--accent-orange); stroke-width: 1.2; fill: none;
       stroke-dasharray: 6 4; opacity: 0.45;
       animation: dash-move 3s linear infinite;
     }
@@ -65,7 +65,7 @@
         <div class="nav-logo-icon">BI</div>
         <div class="nav-logo-text">
           <span class="nav-logo-name">Bridgerton International Pvt Ltd</span>
-          <span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span>
+          <span class="nav-logo-tag">The Future of Global Shipping</span>
         </div>
       </a>
       <div class="nav-links" id="navLinks">
@@ -638,19 +638,19 @@
       </div>
       <div class="gallery-grid" data-aos="fade-left">
         <div class="gallery-item">
-          <img src="images/placeholder-01.jpg" alt="Freight operations dispatch center" />
+          <img src="images/office reception.png" alt="Bridgerton International office reception" />
           <div class="gallery-overlay"><span>Office Reception</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/placeholder-02.jpg" alt="Port container operations" />
+          <img src="images/operations desk.png" alt="Logistics operations desk" />
           <div class="gallery-overlay"><span>Operations Desk</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/placeholder-03.jpg" alt="Logistics team strategy meeting" />
+          <img src="images/strategy room.png" alt="Logistics strategy meeting room" />
           <div class="gallery-overlay"><span>Strategy Room</span></div>
         </div>
         <div class="gallery-item">
-          <img src="images/placeholder-08.jpg" alt="Truck freight coordination" />
+          <img src="images/dispatch center.png" alt="Freight dispatch command center" />
           <div class="gallery-overlay"><span>Dispatch Center</span></div>
         </div>
       </div>
@@ -668,20 +668,20 @@
     </div>
 
     <!-- PRIMARY LEADERSHIP SPLIT LAYOUT -->
-    <div style="background:var(--bg-card); border:1px solid var(--border-amber); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1fr 1.2fr; align-items:center; margin-bottom: 64px;" data-aos="zoom-in">
+    <div style="background:var(--accent-gold); border:2px solid var(--accent-orange); border-radius: var(--radius-lg); overflow:hidden; display:grid; grid-template-columns: 1fr 1.2fr; align-items:center; margin-bottom: 64px; box-shadow: var(--shadow-card-hover);" data-aos="zoom-in">
       <div style="height:450px; width:100%;">
-        <img src="images/ceo.png" alt="Arun Thakur — Founder & CEO" style="width:100%; height:100%; object-fit:cover; filter: brightness(1.1) contrast(1.05);">
+        <img src="images/CEO.jpeg" alt="Arun Thakur — Founder & CEO" style="width:100%; height:100%; object-fit:cover; filter: brightness(1.1) contrast(1.05);">
       </div>
       <div style="padding:48px;">
-        <span class="section-label" style="color:var(--accent-gold); border-color:var(--accent-gold);"><i class="fas fa-crown"></i> &nbsp; Leadership</span>
-        <h3 style="font-size:2rem; margin-bottom:12px; color:var(--text-heading);">Arun Thakur</h3>
-        <p style="color:var(--accent-gold); font-size:0.9rem; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:20px;">Founder & CEO</p>
-        <p style="color:var(--text-body); font-size:0.98rem; line-height:1.9; margin-bottom:24px;">
+        <span class="section-label" style="background:#ffffff; color:var(--accent-orange);"><i class="fas fa-crown"></i> &nbsp; Leadership</span>
+        <h3 style="font-size:2.4rem; margin-bottom:12px; color:#ffffff;">Arun Thakur</h3>
+        <p style="color:#ffffff; font-size:1rem; font-weight:800; text-transform:uppercase; letter-spacing:0.1em; margin-bottom:24px;">Founder & CEO</p>
+        <p style="color:#ffffff; font-size:1.05rem; line-height:1.9; margin-bottom:32px;">
           "At Bridgerton International, we don't just facilitate shipping; we engineer global connectivity. Our mission is to combine the incredible operational depth of India's talent with the regulatory precision of the US market to serve businesses worldwide with an uncompromising standard of excellence."
         </p>
         <div style="display:flex; gap:16px;">
-          <a href="https://wa.me/12095835894" target="_blank" class="btn btn-primary" style="padding:10px 24px; font-size:0.85rem;"><i class="fab fa-whatsapp"></i> Chat with CEO</a>
-          <a href="mailto:Info@bridgertoninternational.com" class="btn btn-outline" style="padding:10px 24px; font-size:0.85rem;"><i class="fas fa-envelope"></i> Email Profile</a>
+          <a href="https://wa.me/12095835894" target="_blank" class="btn btn-primary" style="background:var(--accent-orange) !important;"><i class="fab fa-whatsapp"></i> Chat with CEO</a>
+          <a href="mailto:Info@bridgertoninternational.com" class="btn btn-outline" style="border-color:#ffffff; color:#ffffff !important; background:rgba(255,255,255,0.1);"><i class="fas fa-envelope"></i> Email Profile</a>
         </div>
       </div>
     </div>
@@ -754,7 +754,7 @@
       <div class="footer-brand">
         <a href="index.html" class="nav-logo" style="display:inline-flex;">
           <div class="nav-logo-icon">BI</div>
-          <div class="nav-logo-text"><span class="nav-logo-name">Bridgerton International Pvt Ltd</span><span class="nav-logo-tag"><span style="color: #e53e3e;">The Future of Global Shipping</span></span></div>
+          <div class="nav-logo-text"><span class="nav-logo-name">Bridgerton International Pvt Ltd</span><span class="nav-logo-tag">The Future of Global Shipping</span></div>
         </a>
         <p>Global freight coordination from SAS Nagar, Punjab — 5.0 <i class="fas fa-star" style="color:#F5A623; font-size:0.8rem;"></i> Google rated, serving businesses across 50+ countries worldwide.</p>
         <div class="footer-social">
